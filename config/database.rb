@@ -13,6 +13,9 @@
 #     :socket    => '/tmp/mysql.sock'
 #   }
 #
+
+postgre = URI.parse(ENV['DATABASE_URL'] || '')
+
 ActiveRecord::Base.configurations[:development] = {
   :adapter => 'sqlite3',
   :database => Padrino.root('db', "yururema_development.db"),
@@ -20,9 +23,12 @@ ActiveRecord::Base.configurations[:development] = {
 }
 
 ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', "yururema_production.db"),
-  :encoding => 'utf8'
+  :adapter => 'postgresql',
+  :encoding => 'utf8',
+  :database => postgre.path[1..-1],
+  :username => postgre.user,
+  :password => postgre.password,
+  :host => postn.host
 }
 
 ActiveRecord::Base.configurations[:test] = {
