@@ -1,7 +1,10 @@
+%script#taskTemplate{:type => "text/x-jquery-tmpl"}
+  %li {{=title}}
+
 .remind
-  %a{:href => "hoge"}
+  %a#remindButton{:href => "hoge"}
 .result
-  %ul
+  %ul#taskList
     - @daily_tasks.each do |daily_task|
       %li=  daily_task.title
   .keyword

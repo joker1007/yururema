@@ -18,12 +18,13 @@ class DailyTask < ActiveRecord::Base
   end
 
   def self.get_random(category_name, count)
-    if count >= self.get_category_count(category_name)
+    category_count = self.get_category_count(category_name)
+    if count >= category_count
       DailyTask.category(category_name)
     else
       output = []
       count.times do |i|
-        offset_num = rand(count)
+        offset_num = rand(category_count)
         output << category(category_name).offset(offset_num).limit(1)
       end
       output.flatten

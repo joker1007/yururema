@@ -10,11 +10,12 @@ class Yururema < Padrino::Application
   layout :base
 
   get "/", :provides => [:html, :json] do
+    @daily_tasks = DailyTask.get_random(nil, 3)
     case content_type
     when :html
-      @daily_tasks = DailyTask.get_random(nil, 3)
       render "index"
     when :json
+      @daily_tasks.to_json
     end
   end
 
