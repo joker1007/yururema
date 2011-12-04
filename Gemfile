@@ -10,12 +10,9 @@ gem 'sinatra-flash', :require => 'sinatra/flash'
 
 # Component requirements
 gem 'haml'
-gem 'coffee-script'
-gem 'coffee-filter'
 gem 'activerecord', :require => "active_record"
 gem 'sqlite3'
 gem 'pg', :group => "producion"
-gem 'therubyracer', :group => ["development", "test"]
 
 # Test requirements
 gem 'rspec', :group => ["test", "production"]
