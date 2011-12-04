@@ -6,14 +6,18 @@ $(->
   
   $("select").change((e) ->
     category_name = $(this).children("option:selected").val()
-    alert(category_name)
+    reload_task(category_name)
   )
 )
 
-reload_task = () ->
+reload_task = (category_name) ->
+  if category_name?
+    url = "/?category_name="+category_name
+  else
+    url = "/"
   $.ajax {
     type: "GET"
-    url: "/"
+    url: url
     dataType: "json"
     success: (data) ->
       tasks = _.map(data, (elem)->
