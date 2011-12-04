@@ -23,9 +23,9 @@ class DailyTask < ActiveRecord::Base
       DailyTask.category(category_name)
     else
       output = []
+      offset_table = (0..category_count-1).to_a.shuffle
       count.times do |i|
-        offset_num = rand(category_count)
-        output << category(category_name).offset(offset_num).limit(1)
+        output << category(category_name).offset(offset_table[i]).limit(1)
       end
       output.flatten
     end
