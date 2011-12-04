@@ -38,4 +38,5 @@ group :test do
   gem "growl"
   gem "turn"
   gem "minitest"
+  gem "database_cleaner"
 end
