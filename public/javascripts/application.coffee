@@ -8,6 +8,10 @@ $(->
     category_name = $(this).children("option:selected").val()
     reload_task(category_name)
   )
+
+  setInterval(->
+    reload_task()
+  , 8000)
 )
 
 reload_task = (category_name) ->
