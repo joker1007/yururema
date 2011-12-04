@@ -5,11 +5,14 @@
       e.preventDefault();
       return reload_task();
     });
-    return $("select").change(function(e) {
+    $("select").change(function(e) {
       var category_name;
       category_name = $(this).children("option:selected").val();
       return reload_task(category_name);
     });
+    return setInterval(function() {
+      return reload_task();
+    }, 8000);
   });
   reload_task = function(category_name) {
     var url;
