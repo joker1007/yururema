@@ -46,4 +46,22 @@ describe "DailyTask Model" do
       DailyTask.get_category_count("家事").should == 3
     end
   end
+
+  describe "カテゴリーに含まれるポストをランダムにn件取得する" do
+    include_context "basic data"
+
+    it "#get_random('家事', 3)で3件取得" do
+      random_data = DailyTask.get_random("家事", 3)
+      random_data.count.should == 3
+      random_data[0].should be_a_kind_of(DailyTask)
+      p random_data
+    end
+
+    it "#get_random(nil, 5)で5件取得" do
+      random_data = DailyTask.get_random(nil, 5)
+      random_data.count.should == 5
+      random_data[0].should be_a_kind_of(DailyTask)
+      p random_data
+    end
+  end
 end
