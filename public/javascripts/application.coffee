@@ -3,6 +3,11 @@ $(->
     e.preventDefault()
     reload_task()
   )
+  
+  $("select").change((e) ->
+    category_name = $(this).children("option:selected").val()
+    alert(category_name)
+  )
 )
 
 reload_task = () ->
@@ -32,3 +37,5 @@ reload_task = () ->
         }, 200)
       )
   }
+  
+  
