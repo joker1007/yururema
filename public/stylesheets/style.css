@@ -9,36 +9,54 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 /* CONTENT */
 body {
-	color: #b7d3ea;
   background-color: #e5edf6;
 }
 
 .title {
+  text-align: center;
+  padding: 30px;
+}
+
+.title p {
+  color: #808183;
+  padding: 10px;
+  text-align: center;
+}
+
+.main
+{
+  background-image: url(../images/bubble.png);
+  width: 840px;
+  height: 513px;
+  margin: 0 auto;
+}
+.remind {
+  text-align: center;
   color: #cf4646;
-  background-color: #6792ce;
 }
 
-.button {
-  
-    color: #cf4646;
-    background-color: #6792ce;
-  
+.remind a {
+  display: block;
+  background-image: url(../images/remind.png);
+  width: 248px;
+  height: 76px;
+  margin: 0 auto;
 }
 
-a.remind {
-  background-color: #d54848;
-  width: 200px;
-  height: 200px;
+.remind a:hover{
+  background-position-y: -76px;
+  
 }
 
 .result {
+  margin-top: 100px;
+  margin-left: 270px;
+  width:  300px;
+  height: 160px;
   color: #cf4646;
-  background-color: #6792ce;
-  
 }
 
 .keyword {
   color: #cf4646;
-  background-color: #6792ce;
   
 }
