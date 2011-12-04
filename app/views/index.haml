@@ -4,7 +4,7 @@
 .remind
   %a#remindButton{:href => "hoge"}
 .result
-  %ul#taskList
+  %ul#taskList{:style => "position: relative;"}
     - @daily_tasks.each do |daily_task|
       %li=  daily_task.title
   .keyword
