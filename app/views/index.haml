@@ -1,7 +1,6 @@
 .result
   %ul
-    %li hoge
-    %li foo
-    %li piyo
+    - @daily_tasks.each do |daily_task|
+      %li=  daily_task.title
   .keyword
     %p keyword
