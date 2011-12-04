@@ -93,3 +93,14 @@ body {
   text-align: center;
   font-size: 90%;
 }
+
+.copyright a {
+  text-decoration: none;
+  color: #95aec6;
+}
+
+.copyright a:hover {
+  text-decoration: none;
+  color: #2c4863;
+  font-weight: bold;
+}
