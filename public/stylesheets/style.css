@@ -53,12 +53,13 @@ body {
   width:  350px;
   height: 160px;
   color: #000000;
-  
+  overflow: visible;
 }
 
 .result ul {
   font-size: 150%;
   list-style-image: url(../images/listmark.png);  
+  white-space: nowrap;
 }
 
 .keyword {
