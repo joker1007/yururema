@@ -41,6 +41,9 @@ daily_task36 = DailyTask.create(:title => "銀行からお金おろさなくて�
 daily_task37 = DailyTask.create(:title => "卵買った？")
 daily_task38 = DailyTask.create(:title => "コーヒーの豆買った？")
 daily_task39 = DailyTask.create(:title => "牛乳買った？")
+daily_task40 = DailyTask.create(:title => "大事なデータのバックアップ、大丈夫？")
+daily_task41 = DailyTask.create(:title => "ドメインの更新忘れてない？")
+daily_task42 = DailyTask.create(:title => "故障してる周辺機器の修理依頼は？")
 
 category1 = Category.create(:name => "家事")
 category2 = Category.create(:name => "買い物")
@@ -75,7 +78,7 @@ daily_task25.categories << category3
 daily_task26.categories << category1
 daily_task27.categories << category1
 daily_task28.categories << category1
-daily_task29.categories << category1
+daily_task29.categories << category4
 daily_task30.categories << category1
 daily_task31.categories << category1
 daily_task32.categories << category1
@@ -86,3 +89,6 @@ daily_task36.categories << category1
 daily_task37.categories << category2
 daily_task38.categories << category2
 daily_task39.categories << category2
+daily_task40.categories << category5
+daily_task41.categories << category5
+daily_task42.categories << category5
