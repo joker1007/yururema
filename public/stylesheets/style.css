@@ -49,7 +49,7 @@ body {
 }
 
 .result {
-  margin: 100px auto 0 auto; 
+  margin: 125px auto 0 auto; 
   width:  350px;
   height: 160px;
   color: #000000;
@@ -63,12 +63,11 @@ body {
 }
 
 .keyword {
-  margin: 20px auto 0 auto;
+  margin: 40px auto 0 auto;
   padding-top: 6px;
   width:  337px;
   height: 32px;
   color: #000000;
-  border-radius: 5px;
   background-image: url(../images/genre.png);
   background-repeat: no-repeat;
 }
@@ -101,13 +100,13 @@ body {
   color: #95aec6;
 }
 
+.copyright a:visited {
+  text-decoration: none;
+  color: #95aec6;
+}
+
 .copyright a:hover {
   text-decoration: none;
   color: #2c4863;
   font-weight: bold;
-}
-
-.copyright a:visited {
-  text-decoration: none;
-  color: #95aec6;
 }
