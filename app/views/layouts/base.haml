@@ -1,0 +1,13 @@
+- #coding: utf-8
+!!! 5
+%html
+%head
+  %title YuruReme
+  %meta{:charset => "UTF-8"}
+  = stylesheet_link_tag 'style'
+  %meta{:name => "viewport", :content => "width=1024"}
+%body
+  .content
+    .title
+      = image_tag("title.png", :alt => "ゆるリマ", :height => "20", :style => "border: none;", :width => "20")
+      = yield

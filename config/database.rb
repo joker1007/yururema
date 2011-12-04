@@ -15,20 +15,20 @@
 #
 ActiveRecord::Base.configurations[:development] = {
   :adapter => 'sqlite3',
-  :database => Padrino.root('db', "yururema_development.db")
-
+  :database => Padrino.root('db', "yururema_development.db"),
+  :encoding => 'utf8'
 }
 
 ActiveRecord::Base.configurations[:production] = {
   :adapter => 'sqlite3',
-  :database => Padrino.root('db', "yururema_production.db")
-
+  :database => Padrino.root('db', "yururema_production.db"),
+  :encoding => 'utf8'
 }
 
 ActiveRecord::Base.configurations[:test] = {
   :adapter => 'sqlite3',
-  :database => Padrino.root('db', "yururema_test.db")
-
+  :database => Padrino.root('db', "yururema_test.db"),
+  :encoding => 'utf8'
 }
 
 # Setup our logger

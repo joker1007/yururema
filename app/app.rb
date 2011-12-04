@@ -1,9 +1,22 @@
+# coding: utf-8
 class Yururema < Padrino::Application
   register Padrino::Rendering
   register Padrino::Mailer
   register Padrino::Helpers
+  register Padrino::Reloader
 
   enable :sessions
+
+  layout :base
+
+  get "/", :provides => [:html, :json] do
+    case content_type
+    when :html
+      @daily_tasks = DailyTask.get_random(nil, 3)
+      render "index"
+    when :json
+    end
+  end
 
   ##
   # Caching support

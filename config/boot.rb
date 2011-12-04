@@ -24,6 +24,8 @@ end
 # Add your after load hooks here
 #
 Padrino.after_load do
+  Encoding.default_external = Encoding::UTF_8
+  Encoding.default_internal = Encoding::UTF_8
 end
 
 Padrino.load!
