@@ -15,6 +15,27 @@ daily_task9 = DailyTask.create(:title => "冷蔵庫の食材の消費期限は�
 daily_task10 = DailyTask.create(:title => "シャンプー買った？")
 daily_task11 = DailyTask.create(:title => "Amazonの予約開始日じゃなかったっけ？")
 
+daily_task20 = DailyTask.create(:title => "玄関掃除は大丈夫？")
+daily_task21 = DailyTask.create(:title => "排水口の掃除はした？")
+daily_task22 = DailyTask.create(:title => "振り込みは忘れてない？")
+daily_task23 = DailyTask.create(:title => "メールの返信忘れてない？")
+daily_task24 = DailyTask.create(:title => "部屋の植物の水やり大丈夫？")
+daily_task25 = DailyTask.create(:title => "天気予報はチェックした？")
+daily_task26 = DailyTask.create(:title => "テレビ番組の予約録画はOK？")
+daily_task27 = DailyTask.create(:title => "自転車の空気は大丈夫？")
+daily_task28 = DailyTask.create(:title => "トイレットペーパーの補充は？")
+daily_task29 = DailyTask.create(:title => "いつも飲む薬は飲んだ？")
+daily_task30 = DailyTask.create(:title => "クリーニング取りにいった？")
+daily_task31 = DailyTask.create(:title => "故障してる家電の修理依頼は？")
+daily_task32 = DailyTask.create(:title => "買ったのに読んでない本はない？")
+daily_task33 = DailyTask.create(:title => "目覚まし時計のセットは大丈夫？")
+daily_task34 = DailyTask.create(:title => "恋人や友人の記念日を忘れてない？")
+daily_task35 = DailyTask.create(:title => "ケータイの充電は大丈夫？")
+daily_task36 = DailyTask.create(:title => "銀行からお金おろさなくていいの？")
+daily_task37 = DailyTask.create(:title => "卵買った？")
+daily_task38 = DailyTask.create(:title => "コーヒーの豆買った？")
+daily_task39 = DailyTask.create(:title => "牛乳買った？")
+
 category1 = Category.create(:name => "家事")
 category2 = Category.create(:name => "買い物")
 category3 = Category.create(:name => "仕事")
@@ -30,3 +51,25 @@ daily_task8.categories << category3
 daily_task9.categories << category1
 daily_task10.categories << category2
 daily_task11.categories << category2
+
+
+daily_task20.categories << category1
+daily_task21.categories << category1
+daily_task22.categories << category1
+daily_task23.categories << category3
+daily_task24.categories << category1
+daily_task25.categories << category3
+daily_task26.categories << category1
+daily_task27.categories << category1
+daily_task28.categories << category1
+daily_task29.categories << category1
+daily_task30.categories << category1
+daily_task31.categories << category1
+daily_task32.categories << category1
+daily_task33.categories << category3
+daily_task34.categories << category1
+daily_task35.categories << category1
+daily_task36.categories << category1
+daily_task37.categories << category2
+daily_task38.categories << category2
+daily_task39.categories << category2
