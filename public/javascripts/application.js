@@ -1,15 +1,26 @@
 (function() {
   var reload_task;
   $(function() {
-    return $("#remindButton").click(function(e) {
+    $("#remindButton").click(function(e) {
       e.preventDefault();
       return reload_task();
     });
+    return $("select").change(function(e) {
+      var category_name;
+      category_name = $(this).children("option:selected").val();
+      return reload_task(category_name);
+    });
   });
-  reload_task = function() {
+  reload_task = function(category_name) {
+    var url;
+    if (category_name != null) {
+      url = "/?category_name=" + category_name;
+    } else {
+      url = "/";
+    }
     return $.ajax({
       type: "GET",
-      url: "/",
+      url: url,
       dataType: "json",
       success: function(data) {
         var rendered, tasks;

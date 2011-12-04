@@ -14,4 +14,7 @@
       %select
         %option{:value => "all"} 全て
         - @categories.each do |category|
-          %option{:value => "#{category.name}"}= category.name
+          - if session[:category_name] == category.name
+            %option{:value => "#{category.name}", :selected => "selected"}= category.name
+          - else
+            %option{:value => "#{category.name}"}= category.name

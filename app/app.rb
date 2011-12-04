@@ -9,13 +9,19 @@ class Yururema < Padrino::Application
 
   layout :base
 
-  get "/", :provides => [:html, :json] do
-    if params[:category_name].nil? || params[:category_name] == "all"
+  before do
+    session[:category_name] ||= nil
+    if params[:category_name] == "all"
       category_name = nil
-    else
+      session[:category_name] = category_name
+    elsif !params[:category_name].nil?
       category_name = params[:category_name]
+      session[:category_name] = category_name
     end
-    @daily_tasks = DailyTask.get_random(category_name, 3)
+  end
+
+  get "/", :provides => [:html, :json] do
+    @daily_tasks = DailyTask.get_random(session[:category_name], 3)
     @categories = Category.all
     case content_type
     when :html
