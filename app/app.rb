@@ -10,7 +10,13 @@ class Yururema < Padrino::Application
   layout :base
 
   get "/", :provides => [:html, :json] do
-    @daily_tasks = DailyTask.get_random(nil, 3)
+    if params[:category_name].nil? || params[:category_name] == "all"
+      category_name = nil
+    else
+      category_name = params[:category_name]
+    end
+    @daily_tasks = DailyTask.get_random(category_name, 3)
+    @categories = Category.all
     case content_type
     when :html
       render "index"

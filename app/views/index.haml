@@ -1,3 +1,4 @@
+- #coding: utf-8
 %script#taskTemplate{:type => "text/x-jquery-tmpl"}
   %li {{=title}}
 
@@ -8,4 +9,9 @@
     - @daily_tasks.each do |daily_task|
       %li=  daily_task.title
   .keyword
-    %p keyword
+    %p ジャンル
+    %form
+      %select
+        %option{:value => "all"} 全て
+        - @categories.each do |category|
+          %option{:value => "#{category.name}"}= category.name
