@@ -49,14 +49,46 @@ body {
 }
 
 .result {
-  margin-top: 100px;
-  margin-left: 270px;
-  width:  300px;
+  margin: 100px auto 0 auto; 
+  width:  350px;
   height: 160px;
-  color: #cf4646;
+  color: #000000;
+  
+}
+
+.result ul {
+  font-size: 150%;
+  list-style-image: url(../images/listmark.png);  
 }
 
 .keyword {
-  color: #cf4646;
-  
+  margin: 20px auto 0 auto;
+  width:  337px;
+  height: 32px;
+  color: #000000;
+  border-radius: 5px;
+  background-image: url(../images/genre.png);
+}
+
+.keyword p {
+  float: left;
+  height: 32px;
+  margin-right: 20px;
+  margin-left: 70px;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 80%;
+  color: #666666;
+  text-shadow: 0 1px 1px #ffffff;
+}
+
+.keyword form {
+  margin-top: 0px;
+}
+
+.copyright {
+  color: #95aec6;
+  text-shadow: 0 1px 1px #ffffff;
+  text-align: center;
+  font-size: 90%;
 }
